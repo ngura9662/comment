@@ -1,0 +1,19 @@
+.com{
+    width: 20rem;
+    height: 10rem;
+    border: solid;
+}
+.but{
+    background-color: white;
+    color: black;
+    height: 3rem;
+    width: 5rem;
+    margin-top: 1rem;
+    border: solid;
+    border-radius: 0.6rem;
+}
+body{
+    background-color: black;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}

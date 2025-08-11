@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="comment.css">
+</head>
+<body>
+    <textarea inputmode="comment" class="com"></textarea>
+    <div>
+        <button type="submit" class="but">submit</button>
+    </div>
+    <div id="word-warning" style="color:red; display:none;">Maximum 200 words allowed.</div>
+    <script>
+        const textarea = document.querySelector('.com');
+        const warning = document.getElementById('word-warning');
+        textarea.addEventListener('input', function () {
+            const words = textarea.value.trim().split(/\s+/);
+            if (words.length > 200) {
+                textarea.value = words.slice(0, 200).join(' ');
+                warning.style.display = 'block';
+            } else {
+                warning.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
